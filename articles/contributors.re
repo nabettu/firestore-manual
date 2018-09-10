@@ -15,21 +15,18 @@ https://twitter.com/nabettu
 === 運営Webサービス
 
 ==== ためしがき
+
 日本語のフリーフォントをまとめて試せるサービス
+
 https://tameshigaki.jp
 
 ==== アプリーチ
+
 アプリを紹介するブログパーツがすぐ作れるサービス
+
 http://mama-hack.com/app-reach/
 
 === 技術ブログ
+
 https://nabettu.hatenablog.com
 
-=== 株式会社クリモ
-https://cremo.tokyo
-
-==== ままはっく
-http://mama-hack.com/
-
-==== ほいくびより
-https://hoiku-navi.net/
