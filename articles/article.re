@@ -85,13 +85,20 @@ Cloud Firestore セキュリティルールを使ってみる
 @<href>{https://firebase.google.com/docs/firestore/security/get-started}
 //}
 
-RTDBで設定した場合と同じようにmemosというコレクションを作成し、その中にユーザー毎のドキュメントを作成するという形にしようと思います。
+管理画面のルールタブを選択し、ルール設定画面を表示します。
 
-管理画面のルールタブを選択し、ルール設定画面を表示します。RTDBと同じようにmemos配下に認証時のユーザーID(（user_id）と同じドキュメント名配下は自分自身しか読み書き出来ないように設定します。
+RTDBで設定した場合と同じようにmemosというコレクションを作成し、配下に認証時のユーザーID(（user_id）と同じ名称でドキュメントを作成します。そして、そのドキュメント配下は自分自身しか読み書き出来ないように設定します。
 
-RTDBでは"auth"に認証情報が格納されていましたが、Firestoreのルール設定では"request.auth"になっているので注意が必要です。
+※RTDBでは"auth"に認証情報が格納されていましたが、Firestoreのルール設定では"request.auth"になっているので注意が必要です。
 
-//image[rules][セキュリティルールの設定][scale=0.8]{
+//list[source-code][セキュリティルール][text]{
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /memos/{user_id} {
+      allow read, write: if request.auth.uid == user_id;
+    }
+  }
+}
 //}
 
 == ルールシュミレータの実行
