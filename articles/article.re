@@ -37,7 +37,7 @@ Firestoreではread・writeの他にそれぞれをさらに詳細にget・list�
 
 また、ルール内で@<b>{カスタム関数}を定義できるようになり、複雑化するルールのチェックをより簡潔に記述できるようになりました。
 
-//image[cunstomfunction][カスタム関数の例][scale=0.8]{
+//image[cunstomfunction][カスタム関数の例][scale=0.7]{
 //}
 
 == 料金の違い
